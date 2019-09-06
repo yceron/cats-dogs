@@ -1,5 +1,5 @@
 body {
-    padding: 20px;
+    padding: 40px;
     background-color: #479FB7;
     background-image: url('../images/cats-vs-dogs.png');
     background-repeat: repeat-x repeat-y;
@@ -54,3 +54,5 @@ body {
 }
 
 footer {margin-top:20px; border-top: solid 1px #eeeeee; padding-top:10px;}
+
+h2 {color:#377D8E}

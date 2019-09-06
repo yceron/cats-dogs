@@ -87,9 +87,9 @@ async function doInference() {
          
          
          if (catProbability > 50.0)
-             $("#predictedClassName").html(`I think this is a cat 😸.<br/>I'm <span>${catProbability.toFixed(2)}%</span> certain`);
+             $("#predictedClassName").html(`I think this is a cat 😸<br/>I'm <span>${catProbability.toFixed(2)}%</span> certain`);
         else
-             $("#predictedClassName").html(`I think this is a dog 🐶.<br/>I'm <span>${dogProbability.toFixed(2)}%</span> certain`);
+             $("#predictedClassName").html(`I think this is a dog 🐶<br/>I'm <span>${dogProbability.toFixed(2)}%</span> certain`);
          
      }
     
