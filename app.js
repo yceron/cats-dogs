@@ -13,7 +13,7 @@ async function loadModel() {
     console.log("Loading model...");
     //$('.progress-bar').show();
     $('#progressArea').removeClass("hidden");
-    model = await tf.loadLayersModel('/models/model.json');
+    model = await tf.loadLayersModel('models/model.json');
     // $('.progress-bar').hide();
     $('#progressArea').addClass("hidden");
     console.log("Model loaded ...");
