@@ -1,2 +1,4 @@
 # cats-dogs
-Cats vs Dogs classifier project
+Cats vs Dogs classifier project.
+
+Work in progress. 😊

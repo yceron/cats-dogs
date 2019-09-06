@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>Cats vs Dogs - A TensorflowJS Adventure</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+
+<div id="mainBody" class="container-fluid">
+    <h1 class="title">😸 vs 🐶</h1>
+            <div id="progressArea" class="hidden row">
+                <div class="col-12 text-center">
+                    <div  class="progress progress-bar progress-bar-striped progress-bar-animated mb-2">
+                    </div>
+                    <div>
+                        <h3 class="text-info ">Loading Model</h3>
+                    </div>
+                </div>
+            </div>
+    <div class="row">
+        <div class="col">
+            <img id="srcImage" class="img-fluid" src="/images/cover.png" />
+        </div>
+
+        <div class="col text-center">
+            <!-- <div>
+                <button onclick="loadModel()"
+                class="btn btn-info">Load model</button>
+                <button onclick="doInference()" class="btn btn-primary">Predict!</button>
+            </div> -->
+            <div>
+                <h2>Select a picture, I will tell you if it's a cat or a dog</h2>
+                <div class="form-group">
+                    <div>
+                        <input id="pictureUploader" type="file" onchange="fileSelected(this.files)" />
+                    </div>
+                </div>
+            </div>
+            <div class="previewArea">
+                <div><img id="imagePreview" class="previewImg" /></div>
+                <div class="form-group">
+                    <div id="predictedClassName"></div>
+                    <div id="userMessage"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div id="pics"></div>
+        </div>
+    </div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-6" >
+                <b>TL;DR;</b>
+                <p>This is a cat and dog classifier trained in Tensorflow and running locally on your browser with TensorflowJS.</p>
+                <p>It should detect if an image is either a cat or a dog. So if you give it a picture of a dog, it will <i>probably</i> tell you it is a dog 😁, if you give it a picture of a cat it will <i>maybe</i> tell you if it's a cat.</p>
+                <p>Why the <i>probably</i> and the <i>maybe</i>? Because my model has an accuracy of 87%, which means that there's a 13% chance it will be incorrect.</p>
+                <p>Also, if you give it a picture of something other than a dog or a cat it will tell you the probability of it being a dog or a cat 😂. Why? because the model was only trained with dogs and cats so it only knows how to recognize either one of those. It is in my to-do list figure out the best way to deal with this, but this is only my first project, I'm new at this!</p>
+            </div>
+            <div class="col-6 text-center justify-content-center align-self-center">
+                <p class="love">I ❤</p>
+                <p><img id="srcImage" class="img-fluid" src="/images/tf_logo.png" /></p> 
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                    <b>Coming Soon: </b> I will document how this was created.
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+    
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+
+    <script src="app.js"></script>
+</html>
+
